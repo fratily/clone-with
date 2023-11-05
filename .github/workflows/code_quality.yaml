@@ -2,9 +2,23 @@ name: "Code Quality"
 
 on:
   pull_request:
+    paths:
+      - src
+      - tests
+      - composer.json
+      - phpcs.xml.dist
+      - phpstan.neon.dist
+      - phpunit.xml.dist
   push:
     branches:
       - main
+    paths:
+      - src
+      - tests
+      - composer.json
+      - phpcs.xml.dist
+      - phpstan.neon.dist
+      - phpunit.xml.dist
 
 jobs:
   test:
